@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-dkcloud/console-shared": ["libs/console-shared/src/index.ts"],
+      "@nx-dkcloud/landing-shared": ["libs/landing-shared/src/index.ts"],
+      "@nx-dkcloud/shared": ["libs/shared/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
