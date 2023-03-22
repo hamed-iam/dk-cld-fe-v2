@@ -18,6 +18,8 @@ Visit the [Nx Documentation](https://nx.dev) to learn more.
 
 ### Lib structuring
 
+✨ **A general rule of thumb is to have about 20% of the codes in applications and 80% in libs (keeping apps folder as thin as possible and libs as reusable as possible)** ✨
+
 1- <https://medium.com/@smarth55/structuring-libraries-with-nx-9ffab71a94a0>
 
 2- <https://github.com/nrwl/nx/issues/653> -> a discussion about lib structuring
@@ -25,3 +27,5 @@ Visit the [Nx Documentation](https://nx.dev) to learn more.
 3- <https://github.com/smarth55/nx-demo> -> example of lib structuring
 
 4- <https://levelup.gitconnected.com/moduliths-in-angular-with-nx-b8b0076794fb> -> DDD (domain driven design) this particular article is about angular but same principle can be used with react and etc.
+
+5- <https://nx.dev/more-concepts/grouping-libraries> -> sharing libs according to docs
