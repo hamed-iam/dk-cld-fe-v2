@@ -1,5 +1,6 @@
 import { Button } from 'antd';
 import styled from 'styled-components';
+import { Header } from '@nx-dkcloud/shared';
 
 const StyledPage = styled.div`
   .page {
@@ -18,7 +19,11 @@ export function Index() {
             </h1>
           </div>
 
-          <Button type='primary' size='large'>Button</Button>
+          <Button type="primary" size="large">
+            Button
+          </Button>
+
+          <Header />
         </div>
       </div>
     </StyledPage>
