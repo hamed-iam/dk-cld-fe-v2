@@ -8,6 +8,7 @@ import Document, {
   DocumentInitialProps,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import i18nextConfig from '../next-i18next.config'
 
 export default class CustomDocument extends Document {
   static async getInitialProps(
@@ -30,8 +31,13 @@ export default class CustomDocument extends Document {
   }
 
   render() {
+    const currentLocale =
+      this.props.__NEXT_DATA__.locale ??
+      i18nextConfig.i18n.defaultLocale
+
+
     return (
-      <Html>
+      <Html lang={currentLocale} dir={currentLocale === 'fa' ? 'rtl' : 'ltr'}>
         <Head>{this.props.styles}</Head>
         <body>
           <Main />

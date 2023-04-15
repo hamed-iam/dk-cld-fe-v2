@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import { Breadcrumb, Layout, Menu } from 'antd';
+import { useForm } from "react-hook-form";
+import { Input } from '@nx-dkcloud/shared/util-data-entry';
+
 
 const { Header, Content, Footer } = Layout;
 
@@ -12,6 +15,15 @@ const StyledHeader = styled.div`
 
 export function HeaderCmp(props: HeaderProps) {
   console.log(props)
+
+  const { handleSubmit, control, setValue } = useForm({
+    defaultValues: {input: "",},
+  });
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+  };
+
   return (
     <StyledHeader>
       <Layout className="layout">
@@ -47,6 +59,15 @@ export function HeaderCmp(props: HeaderProps) {
           Ant Design ©2023 Created by Ant UED
         </Footer>
       </Layout>
+
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Input
+          placeholder="Input"
+          control={control}
+          name="input"
+        />
+        <input type="submit" />
+      </form>
     </StyledHeader>
   );
 }
